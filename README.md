@@ -8,10 +8,10 @@
 # Prabhakaran HTML
 
 <!-- ABOUT THE PROJECT -->
-## About Pabhupedia Project
+## About this Project
 
 This is a HTML application. It is created for to deploy in git HUB
 
-* This is the URL  [![HTML]][https://rsrprabhu.github.io/prabhakaran_html.io/] 
+* This is the URL  [https://rsrprabhu.github.io/prabhakaran_html.io/] 
  
  
