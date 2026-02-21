@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prabhakaran Rajan | Full-Stack Developer</title>
 
-  <!-- Embedded Styles -->
   <style>
     * {
       margin: 0;
@@ -15,13 +14,13 @@
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #0f0f12;
-      color: #eaeaf0;
+      background: #ffffff;
+      color: #111111;
       line-height: 1.6;
     }
 
     a {
-      color: #8ab4f8;
+      color: #0b5cff;
       text-decoration: none;
     }
 
@@ -35,9 +34,9 @@
     header {
       position: sticky;
       top: 0;
-      background: rgba(15, 15, 18, 0.9);
+      background: rgba(255, 255, 255, 0.9);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid #222;
+      border-bottom: 1px solid #e5e7eb;
       z-index: 10;
     }
 
@@ -72,14 +71,14 @@
     .hero h2 {
       font-size: 22px;
       font-weight: 400;
-      color: #aaa;
+      color: #444;
       margin: 12px 0;
     }
 
     .hero p {
-      max-width: 720px;
+      max-width: 760px;
       margin: 20px auto 32px;
-      color: #bbb;
+      color: #555;
     }
 
     .buttons a {
@@ -88,15 +87,18 @@
       border-radius: 8px;
       margin: 0 8px;
       font-size: 14px;
+      border: 1px solid #d1d5db;
     }
 
     .primary {
-      background: #8ab4f8;
-      color: #000;
+      background: #0b5cff;
+      color: #ffffff;
+      border-color: #0b5cff;
     }
 
     .secondary {
-      border: 1px solid #444;
+      background: #ffffff;
+      color: #0b5cff;
     }
 
     /* SECTIONS */
@@ -105,7 +107,7 @@
     }
 
     section.alt {
-      background: #15151a;
+      background: #f3f4f6;
     }
 
     section h3 {
@@ -114,21 +116,25 @@
     }
 
     /* CARDS */
-    .card {
-      background: #1b1b22;
+    .card,
+    .skill,
+    .project {
+      background: #f9fafb;
       padding: 24px;
       border-radius: 12px;
       margin-bottom: 20px;
+      border: 1px solid #e5e7eb;
     }
 
-    .card h4 {
+    .card h4,
+    .project h4 {
       font-size: 18px;
       margin-bottom: 6px;
     }
 
     .card span {
       font-size: 13px;
-      color: #999;
+      color: #555;
     }
 
     .card ul {
@@ -147,20 +153,6 @@
       gap: 20px;
     }
 
-    .skill {
-      background: #1b1b22;
-      padding: 20px;
-      border-radius: 12px;
-    }
-
-    /* PROJECTS */
-    .project {
-      background: #1b1b22;
-      padding: 24px;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
-
     /* CONTACT */
     .contact {
       text-align: center;
@@ -170,7 +162,7 @@
       text-align: center;
       padding: 40px;
       font-size: 13px;
-      color: #777;
+      color: #555;
     }
 
     @media (max-width: 768px) {
@@ -183,321 +175,146 @@
 
 <body>
 
-  <!-- NAV -->
-  <header>
-    <div class="container nav">
-      <div class="logo">PR</div>
-      <nav>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="container nav">
+    <div class="logo">PR</div>
+    <nav>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h1>Prabhakaran Rajan</h1>
-      <h2>Full-Stack Software Developer</h2>
-      <p>
-        Full-Stack Developer with 8+ years of experience building scalable
-        enterprise web and mobile applications using Angular, React,
-        Node.js, and .NET Core.
-      </p>
-      <div class="buttons">
-        <a href="#projects" class="primary">View Work</a>
-        <a href="resume.pdf" class="secondary">Download Resume</a>
-      </div>
+<section class="hero">
+  <div class="container">
+    <h1>Prabhakaran Rajan</h1>
+    <h2>Full-Stack Software Developer</h2>
+    <p>
+      Full-Stack Software Developer with 8+ years of experience designing and building
+      scalable enterprise web and mobile applications across retail, HR, fintech,
+      and education domains. Strong expertise in Angular, React, Node.js, and .NET Core,
+      with proven success delivering high-performance systems for large-scale users.
+    </p>
+    <div class="buttons">
+      <a href="#projects" class="primary">View Work</a>
+      <a href="resume.pdf" class="secondary">Download Resume</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
+<section id="experience">
   <div class="container">
     <h3>Experience</h3>
 
-    <!-- LTI Mindtree -->
     <div class="card">
       <h4>LTI Mindtree (Dell Technologies) – Module Lead / Specialist Software Engineer</h4>
       <span>Jul 2021 – Dec 2023 | India</span>
       <ul>
-        <li>Led a 5-member team delivering Angular dashboards integrated with .NET Core and Node.js for retail management across 50+ stores.</li>
-        <li>Implemented real-time reporting using MongoDB, React components, and Chart.js, reducing manual data preparation by 40%.</li>
-        <li>Architected and optimized .NET Core and SQL Server services for high-volume transactions, reducing query latency by ~20%.</li>
-        <li>Established end-to-end automation using Cypress, Jasmine, xUnit, and Jest for React and Node.js services.</li>
-        <li>Collaborated closely with cross-functional stakeholders to translate business requirements into scalable solutions.</li>
+        <li>Led a 5-member team delivering Angular dashboards with .NET Core and Node.js for 50+ retail stores.</li>
+        <li>Implemented real-time reporting using MongoDB and Chart.js, reducing manual effort by 40%.</li>
+        <li>Optimized SQL Server services, improving query performance by ~20%.</li>
+        <li>Established CI/CD and automated testing using Cypress, Jasmine, xUnit, and Jest.</li>
       </ul>
     </div>
 
-    <!-- Adrenalin -->
     <div class="card">
       <h4>Adrenalin E-Systems – Senior Software Engineer</h4>
       <span>Mar 2020 – Jun 2021 | India</span>
       <ul>
-        <li>Led development of a Recruitment Module using Angular, .NET Core, and SQL Server supporting 10,000+ employees.</li>
-        <li>Delivered React Native mobile apps and React web applications with optimized REST APIs achieving sub-200ms responses.</li>
-        <li>Integrated Cypress and Jasmine automation into Azure DevOps CI/CD pipelines, reducing manual QA effort by 35%.</li>
-        <li>Built Retail PRO POS extensions with React frontends and .NET Core backend services.</li>
+        <li>Developed HR recruitment systems supporting 10,000+ employees.</li>
+        <li>Built React and React Native applications with optimized REST APIs.</li>
+        <li>Reduced manual QA by 35% using Cypress and Azure DevOps pipelines.</li>
       </ul>
     </div>
 
-    <!-- DSSI -->
     <div class="card">
       <h4>DSSI India Software Solutions – Software Engineer</h4>
       <span>May 2018 – Feb 2020 | India</span>
       <ul>
-        <li>Engineered a Verification Tracking System using React, .NET Core, and SQL Server, reducing turnaround time by 35%.</li>
-        <li>Built full-stack Angular and Node.js modules with Express APIs validated through Cypress integration testing.</li>
-        <li>Developed responsive, WCAG 2.1–compliant React interfaces with Jest-based component testing.</li>
-        <li>Designed and optimized SQL Server and MySQL database objects with robust data-access layers.</li>
+        <li>Built verification tracking systems using React, .NET Core, and SQL Server.</li>
+        <li>Delivered Angular + Node.js modules validated through integration testing.</li>
+        <li>Developed WCAG-compliant responsive interfaces.</li>
       </ul>
     </div>
 
-    <!-- Cetas -->
     <div class="card">
       <h4>Cetas Information Technology – Software Developer</h4>
       <span>Apr 2016 – Apr 2018 | India</span>
       <ul>
-        <li>Developed Retail POS plugins using Angular frontends and .NET Core services with Jasmine unit testing.</li>
-        <li>Built hybrid mobile applications using Cordova and Ionic alongside React web applications.</li>
-        <li>Implemented RESTful integrations tested using xUnit, Jest, and Cypress.</li>
-        <li>Participated in Angular and React code reviews enforcing MVC and MVVM design patterns.</li>
+        <li>Developed POS plugins and hybrid mobile applications.</li>
+        <li>Implemented RESTful services tested with xUnit and Cypress.</li>
       </ul>
     </div>
 
-    <!-- Freelancing -->
     <div class="card">
       <h4>Freelance Full-Stack Developer</h4>
       <span>Jan 2024 – May 2025</span>
       <ul>
-        <li>
-          <strong>Regions Bank US (EnerBank)</strong> – Developed loan verification and approval workflows using Angular, .NET Core, and SQL Server, automating validation and audit tracking.
-        </li>
-        <li>
-          Integrated UI and API test automation using Jasmine and Cypress with Azure App Services deployment pipelines, improving release turnaround by 35%.
-        </li>
-        <li>
-          <strong>NYC Public School</strong> – Built an Angular + Node.js + MongoDB student management portal used by 200+ students.
-        </li>
-        <li>
-          Delivered interactive analytics dashboards using Chart.js with tested REST APIs.
-        </li>
+        <li>Built loan approval workflows for US banking clients using Angular and .NET Core.</li>
+        <li>Delivered student management portals with analytics dashboards for public schools.</li>
       </ul>
     </div>
-
   </div>
 </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="alt">
+<section id="skills" class="alt">
   <div class="container">
     <h3>Technical Skills</h3>
 
     <div class="skills">
-
-      <div class="skill">
-        <strong>Languages</strong>
-        <p>
-          JavaScript (ES6+), TypeScript, C# (.NET), SQL (T-SQL),
-          Python 3.x, C, HTML5, CSS3 (SASS / LESS), JSX / TSX
-        </p>
-      </div>
-
-      <div class="skill">
-        <strong>Frontend Frameworks</strong>
-        <p>
-          Angular (2–18+), React (16–19), Next.js 14+,
-          React Native, Redux (RTK), NgRx, RxJS,
-          Electron, Material-UI, Tailwind CSS,
-          Bootstrap 5, Angular Material
-        </p>
-      </div>
-
-      <div class="skill">
-        <strong>Backend Frameworks</strong>
-        <p>
-          .NET Core (6 / 7 / 8), ASP.NET Core Web API,
-          Node.js 20+, Express.js, NestJS, Fastify,
-          Server-Side Rendering (SSR),
-          Microservices Architecture
-        </p>
-      </div>
-
-      <div class="skill">
-        <strong>Databases</strong>
-        <p>
-          SQL Server 2019+, MongoDB 7+, PostgreSQL 16,
-          MySQL 8, Oracle 19c, Redis 7,
-          Firebase Realtime / Realm,
-          Prisma ORM, Mongoose ODM,
-          SQL / NoSQL hybrid systems
-        </p>
-      </div>
-
-      <div class="skill">
-        <strong>DevOps & Cloud</strong>
-        <p>
-          Azure DevOps (Pipelines), GitHub Actions,
-          AWS (Lambda, API Gateway, EC2, S3),
-          Docker, Kubernetes, Terraform (IaC),
-          Jenkins, Azure App Services, CloudWatch
-        </p>
-      </div>
-
-      <div class="skill">
-        <strong>Testing & Quality</strong>
-        <p>
-          Cypress (E2E), Jasmine / Karma,
-          xUnit / NUnit, Jest (React),
-          Mocha / Chai, Playwright,
-          SonarQube, TDD,
-          Integration Testing, Mocking Frameworks
-        </p>
-      </div>
-
-      <div class="skill">
-        <strong>APIs & Integration</strong>
-        <p>
-          RESTful APIs, GraphQL (Apollo),
-          gRPC, WebSockets / Socket.io,
-          JWT, OAuth2, OpenID Connect,
-          Postman / Newman, Swagger / OpenAPI,
-          CORS optimization, API rate limiting
-        </p>
-      </div>
-
-      <div class="skill">
-        <strong>Architecture & Patterns</strong>
-        <p>
-          MVC, MVVM, Clean Architecture,
-          SOLID Principles, Domain-Driven Design (DDD),
-          Event-Driven Architecture, CQRS,
-          Repository Pattern, Dependency Injection
-        </p>
-      </div>
-
-      <div class="skill">
-        <strong>Mobile Development</strong>
-        <p>
-          React Native (Expo), Ionic / Cordova,
-          Progressive Web Apps (PWA),
-          NativeScript, Mobile-First Design,
-          Responsive Design, Cross-Browser Compatibility
-        </p>
-      </div>
-
-      <div class="skill">
-        <strong>AI / ML & Analytics</strong>
-        <p>
-          PyTorch 2+, TensorFlow / Keras,
-          LangGraph, OpenAI API (GPT models),
-          Hugging Face Transformers,
-          Streamlit, Tableau,
-          Chart.js, D3.js
-        </p>
-      </div>
-
-      <div class="skill">
-        <strong>Tools & Methodologies</strong>
-        <p>
-          Git (GitHub / GitLab), Agile / Scrum / Kanban,
-          Jira, Confluence, VS Code, Visual Studio 2022,
-          Webpack 5, Vite, ESLint, Prettier,
-          Performance Optimization,
-          Accessibility (WCAG 2.1), SEO
-        </p>
-      </div>
-
+      <div class="skill"><strong>Languages</strong><p>JavaScript, TypeScript, C#, SQL, Python, HTML, CSS</p></div>
+      <div class="skill"><strong>Frontend</strong><p>Angular, React, Next.js, React Native, Redux, Tailwind</p></div>
+      <div class="skill"><strong>Backend</strong><p>.NET Core, ASP.NET Web API, Node.js, Express</p></div>
+      <div class="skill"><strong>Databases</strong><p>SQL Server, MongoDB, PostgreSQL, MySQL</p></div>
+      <div class="skill"><strong>Cloud & DevOps</strong><p>Azure DevOps, AWS, Docker, CI/CD</p></div>
+      <div class="skill"><strong>Testing</strong><p>Cypress, Jest, Jasmine, xUnit</p></div>
+      <div class="skill"><strong>Architecture</strong><p>Clean Architecture, SOLID, Microservices</p></div>
+      <div class="skill"><strong>AI / ML</strong><p>PyTorch, TensorFlow/Keras, LLM APIs</p></div>
     </div>
   </div>
 </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
+<section id="projects">
   <div class="container">
     <h3>Projects</h3>
 
     <div class="project">
       <h4>GetIt – Intelligent Mobile Application</h4>
-      <p><strong>Tech:</strong> React Native, PyTorch, LangGraph, Firebase, Realm</p>
-      <p>
-        Designed and developed a cross-platform mobile application focused on
-        intelligent agent-driven interactions and real-time data synchronization.
-        Integrated AI-powered workflows using PyTorch and LangGraph to handle
-        dynamic user queries and decision logic.
-      </p>
-      <p>
-        Implemented offline-first data storage using Realm with real-time syncing
-        via Firebase to ensure data consistency across devices. Built reusable,
-        high-performance UI components optimized for both Android and iOS.
-      </p>
+      <p><strong>Tech:</strong> React Native, PyTorch, Firebase, Realm</p>
+      <p>AI-powered mobile application with intelligent workflows, offline-first storage, and real-time sync.</p>
     </div>
 
     <div class="project">
       <h4>Louder – Full-Stack Social Media Platform</h4>
-      <p><strong>Tech:</strong> Next.js, Prisma, MongoDB, JWT, REST APIs</p>
-      <p>
-        Built a full-stack social media platform with a strong focus on scalability,
-        performance, and clean architecture. Implemented secure JWT-based authentication,
-        user profiles, and content feeds using RESTful APIs.
-      </p>
-      <p>
-        Used Next.js server-side rendering to improve SEO and initial load performance.
-        Designed a modular backend with Prisma ORM and MongoDB, improving feature delivery
-        speed by approximately 30%.
-      </p>
+      <p><strong>Tech:</strong> Next.js, MongoDB, Prisma</p>
+      <p>Scalable social platform with authentication, SSR, and modular backend architecture.</p>
     </div>
 
     <div class="project">
       <h4>Loan Approval & Verification System</h4>
-      <p><strong>Tech:</strong> Angular, .NET Core, SQL Server, Azure App Services</p>
-      <p>
-        Developed a secure loan verification and approval workflow system to automate
-        validation, audit tracking, and approval processes. Built Angular dashboards
-        integrated with optimized .NET Core Web APIs.
-      </p>
-      <p>
-        Implemented automated UI and API testing using Jasmine and Cypress and deployed
-        applications using Azure App Services with CI/CD pipelines, reducing release
-        turnaround time by approximately 35%.
-      </p>
+      <p><strong>Tech:</strong> Angular, .NET Core, SQL Server</p>
+      <p>Automated loan processing system with audit tracking and CI/CD deployments.</p>
     </div>
-
-    <div class="project">
-      <h4>Student Management & Analytics Portal</h4>
-      <p><strong>Tech:</strong> Angular, Node.js, MongoDB, Chart.js</p>
-      <p>
-        Built a web-based portal for managing student attendance, performance tracking,
-        and analytics used by 200+ students. Developed RESTful APIs and integrated
-        interactive dashboards to visualize participation and performance trends.
-      </p>
-      <p>
-        Focused on responsive design, usability, and reliable data handling to enable
-        educators to monitor and analyze student performance efficiently.
-      </p>
-    </div>
-
   </div>
 </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="alt">
-    <div class="container contact">
-      <h3>Contact</h3>
-      <p>Toronto, Canada</p>
-      <p>Email: <a href="mailto:prabhass575@gmail.com">prabhass575@gmail.com</a></p>
-      <p>
-        <a href="https://linkedin.com/in/prabhakaran-rajan-551528b1">LinkedIn</a> ·
-        <a href="https://github.com/rsrprabhu">GitHub</a>
-      </p>
-    </div>
-  </section>
+<section id="contact" class="alt">
+  <div class="container contact">
+    <h3>Contact</h3>
+    <p>Toronto, Canada</p>
+    <p>Email: <a href="mailto:prabhass575@gmail.com">prabhass575@gmail.com</a></p>
+    <p>
+      <a href="https://linkedin.com/in/prabhakaran-rajan-551528b1">LinkedIn</a> ·
+      <a href="https://github.com/rsrprabhu">GitHub</a>
+    </p>
+  </div>
+</section>
 
-  <footer>
-    © 2026 Prabhakaran Rajan
-  </footer>
+<footer>
+  © 2026 Prabhakaran Rajan
+</footer>
 
 </body>
 </html>
