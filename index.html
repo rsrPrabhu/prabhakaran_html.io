@@ -1,226 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prabhakaran Rajan – Resume</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prabhakaran Rajan | Full-Stack Developer</title>
 
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-            border-radius: 10px;
-        }
+  <!-- Embedded Styles -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f0f12;
+      color: #eaeaf0;
+      line-height: 1.6;
+    }
 
-        h1 {
-            margin: 0;
-            font-size: 2.2rem;
-        }
+    a {
+      color: #8ab4f8;
+      text-decoration: none;
+    }
 
-        .contact {
-            margin-top: 0.5rem;
-            font-size: 0.95rem;
-            color: #666;
-        }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
 
-        .contact a {
-            color: #0073b1;
-            text-decoration: none;
-            margin: 0 0.5rem;
-        }
+    /* NAV */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(15, 15, 18, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #222;
+      z-index: 10;
+    }
 
-        h2 {
-            border-bottom: 2px solid #0073b1;
-            padding-bottom: 0.3rem;
-            margin-top: 2rem;
-            font-size: 1.4rem;
-            color: #0073b1;
-        }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+    }
 
-        .section p,
-        ul {
-            margin: 0.5rem 0 1rem;
-        }
+    .logo {
+      font-weight: 700;
+      font-size: 18px;
+    }
 
-        ul {
-            padding-left: 1.2rem;
-        }
+    nav a {
+      margin-left: 24px;
+      font-size: 14px;
+    }
 
-        .job-title {
-            font-weight: bold;
-            font-size: 1rem;
-        }
+    /* HERO */
+    .hero {
+      padding: 120px 0 100px;
+      text-align: center;
+    }
 
-        .company {
-            color: #666;
-            font-style: italic;
-        }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+    }
 
-        .date {
-            float: right;
-            color: #999;
-            font-size: 0.9rem;
-        }
+    .hero h2 {
+      font-size: 22px;
+      font-weight: 400;
+      color: #aaa;
+      margin: 12px 0;
+    }
 
-        footer {
-            text-align: center;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-            color: #aaa;
-        }
+    .hero p {
+      max-width: 720px;
+      margin: 20px auto 32px;
+      color: #bbb;
+    }
 
-        @media (max-width: 600px) {
-            .date {
-                float: none;
-                display: block;
-            }
-        }
-    </style>
+    .buttons a {
+      display: inline-block;
+      padding: 12px 26px;
+      border-radius: 8px;
+      margin: 0 8px;
+      font-size: 14px;
+    }
+
+    .primary {
+      background: #8ab4f8;
+      color: #000;
+    }
+
+    .secondary {
+      border: 1px solid #444;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 0;
+    }
+
+    section.alt {
+      background: #15151a;
+    }
+
+    section h3 {
+      font-size: 28px;
+      margin-bottom: 32px;
+    }
+
+    /* CARDS */
+    .card {
+      background: #1b1b22;
+      padding: 24px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .card h4 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .card span {
+      font-size: 13px;
+      color: #999;
+    }
+
+    .card ul {
+      margin-top: 12px;
+      padding-left: 18px;
+    }
+
+    .card li {
+      margin-bottom: 6px;
+    }
+
+    /* SKILLS */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .skill {
+      background: #1b1b22;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    /* PROJECTS */
+    .project {
+      background: #1b1b22;
+      padding: 24px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 13px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Prabhakaran Rajan</h1>
-            <div class="contact">
-                Toronto, ON, Canada |
-                <a href="mailto:your.email@example.com">prabhass575@gmail.com</a> |
-                <a href="https://www.linkedin.com/in/prabhakaran-rajan-551528b1/" target="_blank">LinkedIn</a> |
-                <a href="https://github.com/rsrPrabhu?tab=repositories" target="_blank">GitHub</a>
-            </div>
-        </header>
 
-        <section class="section">
-            <h2>Summary</h2>
-            <p>Detail-oriented software engineering student with practical experience in full-stack and mobile development using React Native, SwiftUI, Angular, .NET, and Firebase. Currently pursuing a postgraduate diploma in Mobile Application Development and Strategy at George Brown College and seeking a co-op opportunity to apply technical skills and contribute to real-world software solutions.</p>
-        </section>
-
-        <section class="section">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> C#, TypeScript, JavaScript, Python, SQL</li>
-                <li><strong>Frontend:</strong> Angular, ReactJS, Next.js, Tailwind CSS, Bootstrap, Blazor, HTML, CSS, Redux</li>
-                <li><strong>Backend:</strong> Node.js, Express.js, ASP.NET Core</li>
-                <li><strong>Mobile:</strong> Kotlin, Swift, React Native, Ionic, Android Development (Android Studio, SDK Level 21+), iOS Development</li>
-                <li><strong>Machine Learning:</strong> Python, PyTorch, Keras, Pandas</li>
-                <li><strong>Databases:</strong> MongoDB, Microsoft SQL Server, Oracle SQL, PostgreSQL</li>
-                <li><strong>Cloud & Services:</strong> Azure, Firebase, AWS EC2, Google API Integration</li>
-                <li><strong>Tools:</strong> xUnit, Git/GitHub, Cypress, Jasmine, Agile/Scrum methodologies, React Testing Library, Playwright, CI/CD pipelines, Agile collaboration, cross-functional teamwork</li>
-                <li><strong>Design & Prototyping:</strong> Adobe XD (wireframing & UI prototyping)</li>
-            </ul>
-        </section>
-
-
-        <section class="section">
-            <h2>Professional Experience</h2>
-
-            <p class="job-title">Specialist – Software Engineering <span class="date">Jul 2021 – Dec 2023</span></p>
-            <p class="company">LTIMindtree, Chennai, India</p>
-            <ul>
-                <li>Built web applications for Dell's Retail Management System using Angular, Node.js, MongoDB, and Chart.js.</li>
-                <li>Developed, tested, and deployed scalable full-stack applications using React, Node.js, Express, and PostgreSQL.</li>
-                <li>Collaborated with stakeholders to implement business rule logic using C# and Microsoft SQL Server.</li>
-                <li>Contributed to CI/CD pipelines with GitHub Actions and participated in Agile sprints, code reviews, and design discussions.</li>
-                <li>Integrated REST APIs and backend services using Python, Express.js, and relational databases.</li>
-            </ul>
-
-            <p class="job-title">Senior Software Engineer <span class="date">Mar 2020 – Jun 2021</span></p>
-
-            <p class="company">Adrenalin E-systems, Chennai, India</p>
-            <ul>
-                <li>Led the development of the Recruitment Module for an enterprise HR Management System using Angular, .NET Core, and Microsoft SQL Server.</li>
-                <li>Integrated test automation into CI/CD pipelines using Git, GitHub, Jenkins, and xUnit for efficient and reliable deployments.</li>
-                <li>Participated in Agile sprints and collaborated with cross-functional teams to design, debug, and deliver production-ready features.</li>
-                <li>Applied core programming concepts, data structures, and unit testing practices using Jest and Cypress.</li>
-                <li>Passionate about leveraging full-stack development skills to drive healthtech innovation and improve digital clinical trial processes.</li>
-            </ul>
-
-            <p class="job-title">Software Engineer <span class="date">May 2018 – Feb 2020</span></p>
-            <p class="company">DSSI India Software Solutions, Chennai, India</p>
-            <ul>
-                <li>Developed a Verification Tracking System to support employer background checks using Angular, .NET Core, and Microsoft SQL Server.</li>
-                <li>Built full-stack features using React, Node.js, and Express; integrated CI/CD pipelines with GitHub Actions and Jenkins for automated testing and deployment.</li>
-                <li>Created reusable components and maintained object-oriented codebases in Unity and .NET to support scalable game system architecture.</li>
-                <li>Optimized backend services using C# and Python, significantly improving API performance and system reliability.</li>
-            </ul>
-
-            <p class="job-title">Software Developer <span class="date">Apr 2016 – Apr 2018</span></p>
-            <p class="company">Cetas Information Technology, Chennai, India</p>
-            <ul>
-                <li>Created plugins for Retail PRO software to enhance retail operations and improve system usability.</li>
-                <li>Developed gameplay features and in-editor tools using C# and Unity, contributing to better player experience and game flow.</li>
-                <li>Integrated test automation with xUnit and GitHub Actions into CI/CD pipelines to ensure regression-free deployments.</li>
-                <li>Wrote and executed unit tests using React Testing Library, Playwright, and Jest to maintain high test coverage and improve software quality.</li>
-                <li>Led Agile sprint planning and breakdown of BRD/FRD requirements into deliverable user stories, advocating for automated testing and contextual logging practices.</li>
-            </ul>
-
-
-
-        </section>
-
-
-        <section class="section">
-            <h2>Projects</h2>
-
-            <p><strong>FIND3 – AI-Powered Q&A Tool</strong></p>
-            <ul>
-                <li>Built an intelligent dataset Q&A application using LangGraph, PyTorch, and React to parse structured data and generate actionable insights.</li>
-                <li>Integrated Mixtral and React Native to explore mobile-first AI interfaces for enhanced interactivity.</li>
-            </ul>
-
-            <p><strong>GetIt Mobile App</strong></p>
-            <ul>
-                <li>Developing an AI-integrated mobile app using React Native, PyTorch, LangGraph, and Mixtral to explore mobile-first AI agents.</li>
-                <li>Implemented backend logic and data pipelines using PyTorch and LangGraph for real-time reasoning.</li>
-                <li>Added features including user authentication, product listings, and live order tracking using Realm and Firebase.</li>
-                <li>Designed a fully responsive mobile UI with React Native for optimal usability across devices.</li>
-            </ul>
-
-            <p><strong>Louder – Full-Stack Social Media App</strong></p>
-            <ul>
-                <li>Built a complete social media platform using Next.js, MongoDB, and Prisma ORM for account creation, image posting, liking, and commenting.</li>
-                <li>Designed RESTful APIs and implemented Redux for efficient state management.</li>
-                <li>Used ReactJS and Tailwind CSS to build a modern, responsive UI.</li>
-            </ul>
-
-            <p><strong>Turo Car Rental – Android App</strong></p>
-            <ul>
-                <li>Developed an Android app that allows users to list, search, and book rental cars with real-time location tracking via Google Maps API.</li>
-                <li>Used Firebase Firestore for dynamic backend data management of user accounts, car listings, and bookings.</li>
-                <li>Built with Android Studio and integrated responsive design and authentication flows.</li>
-            </ul>
-        </section>
-
-
-        <section class="section">
-            <h2>Education</h2>
-            <p><strong>Postgraduate Diploma – Mobile Application Development and Strategy</strong> <span class="date">2024 – 2025</span><br />
-                George Brown College, Toronto, Canada</p>
-
-            <p><strong>Bachelor’s Degree in Electronics and communication Engineering</strong><br />
-                Anna University, India</p>
-        </section>
-
-        <footer>
-            © 2025 Prabhakaran Rajan
-        </footer>
+  <!-- NAV -->
+  <header>
+    <div class="container nav">
+      <div class="logo">PR</div>
+      <nav>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-</body>
+  </header>
 
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Prabhakaran Rajan</h1>
+      <h2>Full-Stack Software Developer</h2>
+      <p>
+        Full-Stack Developer with 8+ years of experience building scalable
+        enterprise web and mobile applications using Angular, React,
+        Node.js, and .NET Core.
+      </p>
+      <div class="buttons">
+        <a href="#projects" class="primary">View Work</a>
+        <a href="resume.pdf" class="secondary">Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <h3>Experience</h3>
+
+      <div class="card">
+        <h4>LTI Mindtree – Module Lead</h4>
+        <span>Jul 2021 – Dec 2023</span>
+        <ul>
+          <li>Led Angular + .NET Core systems across 50+ retail stores</li>
+          <li>Reduced manual reporting effort by 40%</li>
+          <li>Improved SQL query latency by ~20%</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4>Adrenalin E-Systems – Senior Software Engineer</h4>
+        <span>Mar 2020 – Jun 2021</span>
+        <ul>
+          <li>Built HR platforms supporting 10,000+ employees</li>
+          <li>Delivered React and React Native applications</li>
+          <li>Integrated CI/CD using Azure DevOps</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="alt">
+    <div class="container">
+      <h3>Technical Skills</h3>
+      <div class="skills">
+        <div class="skill"><strong>Frontend</strong><p>Angular, React, Next.js</p></div>
+        <div class="skill"><strong>Backend</strong><p>.NET Core, Node.js</p></div>
+        <div class="skill"><strong>Databases</strong><p>SQL Server, MongoDB</p></div>
+        <div class="skill"><strong>DevOps</strong><p>Azure DevOps, Docker, AWS</p></div>
+        <div class="skill"><strong>Testing</strong><p>Cypress, Jest, xUnit</p></div>
+        <div class="skill"><strong>AI / ML</strong><p>PyTorch, Keras, LLM APIs</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <h3>Projects</h3>
+
+      <div class="project">
+        <h4>GetIt Mobile App</h4>
+        <p>
+          React Native + PyTorch application for intelligent agent interactions
+          with real-time Firebase synchronization.
+        </p>
+      </div>
+
+      <div class="project">
+        <h4>Louder – Social Media Platform</h4>
+        <p>
+          Full-stack Next.js application with JWT authentication,
+          Prisma ORM, and MongoDB.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="alt">
+    <div class="container contact">
+      <h3>Contact</h3>
+      <p>Toronto, Canada</p>
+      <p>Email: <a href="mailto:prabhass575@gmail.com">prabhass575@gmail.com</a></p>
+      <p>
+        <a href="https://linkedin.com/in/prabhakaran-rajan-551528b1">LinkedIn</a> ·
+        <a href="https://github.com/rsrprabhu">GitHub</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Prabhakaran Rajan
+  </footer>
+
+</body>
 </html>
